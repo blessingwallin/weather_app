@@ -1,4 +1,4 @@
-# WeatherApp (Python + WeatherAPI)
+# Python WeatherApp 
 
 A simple and modular weather application written in Python. It fetches real-time weather data, 3-day forecasts, and active weather alerts using the [WeatherAPI](https://www.weatherapi.com/).
 
