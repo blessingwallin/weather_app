@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3 Day Forecast</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>3 Day Weather Forecast for {{ data.city }}, {{ data.region }}, {{ data.country }}</h1>
+
+    {% for day in data.forecast_days %}
+        <h3>{{ day.date }}</h3>
+        <p>Condition: {{ day.condition }}</p>
+        <p>High: {{ day.high }}°F | Low: {{ day.low }}°F</p>
+        <p>Humidity: {{ day.humidity }}% | Wind Gusts: {{ day.wind }} mph</p>
+        <p>Total Precipitation: {{ day.precip }} in</p>
+        <hr>
+    {% endfor %}
+
+    <a href="/">Back</a>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Welcome to Blessing Wallin's Weather App</h1>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="post">
+        <label for="city">Enter city or zipcode:</label>
+        <input type="text" id="city" name="city" required>
+
+        <p>Select option:</p>
+        <div class="radio-group">
+            <label for="today">
+                <input type="radio" id="today" name="option" value="1" checked>
+                Today's Weather
+            </label>
+
+            <label for="forecast">
+                <input type="radio" id="forecast" name="option" value="2">
+                3 Day Forecast
+            </label>
+
+            <label for="alerts">
+                <input type="radio" id="alerts" name="option" value="3">
+                Weather Alerts
+            </label>
+        </div>
+
+        <input type="submit" value="Get Weather">
+    </form>
+</body>
+</html>

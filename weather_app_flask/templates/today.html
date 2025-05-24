@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Today's Weather</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Today's Weather in {{ data.city }}, {{ data.region }}, {{ data.country }}</h1>
+    <p>Currently: {{ data.temp_f }}°F and {{ data.condition }}</p>
+    <p>Pressure: {{ data.pressure }} mbar | Humidity: {{ data.humidity }}% | Wind: {{ data.wind_mph }} mph</p>
+
+    <a href="/">Back</a>
+</body>
+</html>

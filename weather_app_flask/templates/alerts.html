@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Alerts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Weather Alerts for {{ data.city }}, {{ data.region }}, {{ data.country }}</h1>
+
+    {% if not data.alerts %}
+        <p>No active weather alerts.</p>
+    {% else %}
+        {% for alert in data.alerts %}
+            <h3>{{ alert.headline }}</h3>
+            <p>Severity: {{ alert.severity }}</p>
+            <p>Areas: {{ alert.areas }}</p>
+            <p>Effective: {{ alert.effective }} | Expires: {{ alert.expires }}</p>
+            <hr>
+        {% endfor %}
+    {% endif %}
+
+    <a href="/">Back</a>
+</body>
+</html>
