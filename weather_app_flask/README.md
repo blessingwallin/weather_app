@@ -26,3 +26,5 @@ The app can be used directly from Python scripts or through a lightweight Flask 
 - **Web Interface**: Simple Flask form for interactive use.
 
 ---
+
+Developed by [Blessing Wallin](https://github.com/blessingwallin)
